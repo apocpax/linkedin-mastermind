@@ -1,0 +1,110 @@
+body {
+margin: 0%;
+padding: 0;
+background-color: black;
+}
+
+.board {
+    background-color: grey;
+    width: 35%;
+    height: 95vh;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* anwser area */
+.anwser-container{
+        display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+    padding-top: 1%;
+}
+
+.anwser-box{
+        display: flex;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    vertical-align: top;
+}
+.anwser{
+        display: flex;
+        width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.button-container{
+       display: flex;
+    width: 25%;
+    height: 96%;
+    border: 1px solid black;
+}
+
+.submit-btn {
+        display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    margin: auto;
+    text-align: center;
+}
+/* guessing area */
+.guess-container{
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+}
+
+.guess-row{
+    display: flex;
+    height: 9.7%;
+    width: 100%;
+    border-bottom: 1px solid darkred;
+}
+.guess-holders{
+display: flex;
+height: 100%;
+width: 70%;
+
+}
+
+.guess-holder{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    margin-left: 1px;
+    padding: 0 1%;
+}
+
+.grades-holders{
+display: flex;
+flex-wrap: wrap;
+height: 100%;
+width: 25%;
+border: 1px solid black;
+}
+.grade-holder{
+    display: flex;
+    box-sizing: border-box;
+    width: 45%;
+    height: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.selection-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+}
