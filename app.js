@@ -38,12 +38,24 @@ $(document).ready(function() {
   }
 //^ so cool
 
+let guessHolderArray = [[-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],
+                        [-1, -1, -1, -1],];
 
 
 //function to remove current class
 
   $('.submit-btn').click(function() {
       $('.current').removeClass('current');
+      console.log(guessHolderArray[guess]);
+      console.log(randomNumbers)
       guess++;
       //add current class to next row
       for(let i = 0; i < 4; i++) {
@@ -70,17 +82,18 @@ $(document).ready(function() {
         if(colorChosen) {
             if ($(this).hasClass('current')) {
             let number = parseInt($(this).css('border'));
-            console.log(number);
+
             if (number === 0) {
             $(this).css('background-color', selectedMarble);
             $(this).css('border', '2px solid white');
-
+            let spot = $(this).attr('id');
+            updateGuessArray(selectedMarble, spot);
             guessCount++;
             if(guessCount === 4) {
                 $('.submit-btn').show();
                 guessCount = 0;
             }
-            console.log(number);
+
             } else {
                 $(this).css('background-color', backGroundColor);
                 $(this).css('border', '1px solid yellow');
@@ -104,7 +117,21 @@ async function comboMake() {
         )
     }
 
+    function updateGuessArray(color, ab) {
+        let array = ab.split('-');
+        let a = array[1]
+        let b =array[2]
+     guessHolderArray[a][b] = makeColorIntoANumber(color);
+    }
 
+    function makeColorIntoANumber(color) {
+        if(color === 'rgb(255, 0, 0)')  return 0;
+        if(color === 'rgb(0, 128, 0)')  return 1;
+        if(color === 'rgb(255, 255, 0)')  return 2;
+        if(color === 'rgb(0, 0, 255)')  return 3;
+        if(color === 'rgb(0, 0, 0)')  return 4;
+        if(color === 'rgb(255, 255, 255)')  return 5;
 
+    }
 
 });
