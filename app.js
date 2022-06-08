@@ -22,6 +22,8 @@ $(document).ready(function() {
 
   let currentArray = $('.guess-holders');
   let guessBoxArray = [];
+  let nextGradeBox =
+  $($('.firstAnwsers')[0]).parent()[0];
   for(let i = 9; i >= 0; i--) {
       guessBoxArray.push(currentArray[i]);
   }
@@ -54,8 +56,10 @@ let guessHolderArray = [[-1, -1, -1, -1],
 
   $('.submit-btn').click(function() {
       $('.current').removeClass('current');
-      console.log(guessHolderArray[guess]);
-      console.log(randomNumbers)
+      let gradeArray = getGrade();
+      checkIfWon(gradeArray);
+      let gradeBox = nextBox();
+      gradedPegs(gradeArray, gradeBox);
       guess++;
       //add current class to next row
       for(let i = 0; i < 4; i++) {
@@ -73,7 +77,6 @@ let guessHolderArray = [[-1, -1, -1, -1],
         selectedMarble =
         $(this).css('background-color');
        $(marble).css('background-color', selectedMarble);
-       console.log(selectedMarble);
     });
 
     //event listener for clicking to add the color
@@ -104,7 +107,7 @@ let guessHolderArray = [[-1, -1, -1, -1],
 
     //the get request to get the random numbers
 async function comboMake() {
-   axios.get("https://www.random.org/integers/?num=4&min=0&max=7&col=1&base=10&format=plain&rnd=new")
+   axios.get("https://www.random.org/integers/?num=4&min=0&max=5&col=1&base=10&format=plain&rnd=new")
         .then((response) => {
             let data = response.data.split("");
             let stringNumbers = data.filter(el => el !== '\n')
@@ -120,7 +123,7 @@ async function comboMake() {
     function updateGuessArray(color, ab) {
         let array = ab.split('-');
         let a = array[1]
-        let b =array[2]
+        let b = array[2]
      guessHolderArray[a][b] = makeColorIntoANumber(color);
     }
 
@@ -133,5 +136,66 @@ async function comboMake() {
         if(color === 'rgb(255, 255, 255)')  return 5;
 
     }
+
+    //to check for correct guess
+
+    function getGrade() {
+        let pegAnwserArray = [];
+        let loopArray = [];
+        for ( let i = 0; i < 4; i++ ) {
+            loopArray.push(randomNumbers[i]);
+        }
+
+        for(i = 0; i < 4; i++){
+            if (guessHolderArray[guess][i] === loopArray[i]) {
+                pegAnwserArray.push('black-peg');
+                loopArray[i] = -1;
+                guessHolderArray[guess][i] = -2;
+            }
+        }
+
+        //for right color but wrong spot pegs
+
+        for(let i = 0; i < 4; i++) {
+            for(let j = 0; j < 4; j++) {
+                if(guessHolderArray[guess][i] === loopArray[j]) {
+                pegAnwserArray.push('white-peg');
+                loopArray[j] = -1;
+                guessHolderArray[guess][i] = -2;
+                }
+            }
+        }
+
+        console.log(loopArray);
+        console.log(guessHolderArray[guess]);
+        console.log(pegAnwserArray);
+        return pegAnwserArray;
+    }
+    //function to select the grade boxes when hitting submit
+
+    function nextBox() {
+        let currentGrade =
+        nextGradeBox.getElementsByClassName('grades-holders')[0];
+        nextGradeBox = $(nextGradeBox).prev()[0];
+        return currentGrade
+    }
+
+ function gradedPegs(gradeArray, gradeBox) {
+    let gradedPegArray = gradeBox.getElementsByClassName("grade-holder");
+    console.log(gradedPegArray)
+    for(let i = 0; i < gradeArray.length; i++) {
+      $(gradedPegArray[i]).addClass(`${gradeArray[i]}`);
+    }
+    $('.white-peg').css('background-color', 'white');
+    $('.black-peg').css('background-color', 'black');
+  }
+
+  function checkIfWon(checkArray) {
+    let checkString = checkArray.join()
+    console.log(checkString);
+    if (checkString === 'black-peg,black-peg,black-peg,black-peg') {
+            $('.modal').fadeIn(200);
+        }
+  }
 
 });
