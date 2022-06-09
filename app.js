@@ -90,7 +90,7 @@ $('.selector-color').click(function () {
             if ($(this).hasClass('current')) {
             let number = parseInt($(this).css('border'));
             console.log(`this is the number ${number}`)
-            if (number === 0) {
+            if (number === 1) {
                 $(this).css('background-color', selectedMarble);
                 $(this).css('border', '2px solid white');
                 let spot = $(this).attr('id');
