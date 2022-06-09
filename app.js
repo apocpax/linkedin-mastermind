@@ -12,8 +12,8 @@ $(document).ready(function() {
   let guessCount = 0;
 // to prevent clicking the holders without a color
   let colorChosen = false;
-//for the anwser
-    let comboAnwser = comboMake();
+//for the answer
+    let comboAnswer = comboMake();
 
 
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
   let currentArray = $('.guess-holders');
   let guessBoxArray = [];
   let nextGradeBox =
-  $($('.firstAnwsers')[0]).parent()[0];
+  $($('.firstAnswers')[0]).parent()[0];
   for(let i = 9; i >= 0; i--) {
       guessBoxArray.push(currentArray[i]);
   }
@@ -120,8 +120,8 @@ async function comboMake() {
             randomNumbers = stringNumbers.map(function (x){
                 return parseInt(x);
             })
-            let comboAnwser = randomNumbers;
-            console.log(comboAnwser)
+            let comboAnswer = randomNumbers;
+            console.log(comboAnswer)
             }
         )
     }
