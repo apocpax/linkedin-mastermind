@@ -204,11 +204,81 @@ background-color: red;
     background-color: white;
 }
 
-h3{
+.number0{
 
-   position: relative;
-    left: 30%;
-   bottom: 80%;
+   position: absolute;
+    left: 34.25%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number1{
+
+   position: absolute;
+    left: 38.5%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number2{
+
+   position: absolute;
+    left: 43%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number3{
+
+   position: absolute;
+    left: 47.25%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number4{
+
+   position: absolute;
+    left: 51.60%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number5{
+
+   position: absolute;
+    left: 56%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number6{
+
+   position: absolute;
+    left: 60.25%;
+   bottom: 0%;
+   font-size: 25px;
+   color: gray;
+
+}
+
+.number7{
+
+   position: absolute;
+    left: 64.75%;
+   bottom: 0%;
    font-size: 25px;
    color: gray;
 
