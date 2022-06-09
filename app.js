@@ -107,7 +107,7 @@ let guessHolderArray = [[-1, -1, -1, -1],
 
     //the get request to get the random numbers
 async function comboMake() {
-   axios.get("https://www.random.org/integers/?num=4&min=0&max=5&col=1&base=10&format=plain&rnd=new")
+   axios.get("https://www.random.org/integers/?num=4&min=0&max=7&col=1&base=10&format=plain&rnd=new")
         .then((response) => {
             let data = response.data.split("");
             let stringNumbers = data.filter(el => el !== '\n')
@@ -129,18 +129,20 @@ async function comboMake() {
 
     function makeColorIntoANumber(color) {
         if(color === 'rgb(255, 0, 0)')  return 0;
-        if(color === 'rgb(0, 128, 0)')  return 1;
-        if(color === 'rgb(255, 255, 0)')  return 2;
+        if(color === 'rgb(255, 255, 0)')  return 1;
+        if(color === 'rgb(0, 128, 0)')  return 2;
         if(color === 'rgb(0, 0, 255)')  return 3;
-        if(color === 'rgb(0, 0, 0)')  return 4;
-        if(color === 'rgb(255, 255, 255)')  return 5;
+        if(color === 'rgb(128, 0, 128)')  return 4;
+        if(color === 'rgb(255, 192, 203)')  return 5;
+        if(color === 'rgb(0, 0, 0)')  return 6;
+        if(color === 'rgb(255, 255, 255)')  return 7;
 
     }
 
     //to check for correct guess
 
     function getGrade() {
-        let pegAnwserArray = [];
+        let pegAnswerArray = [];
         let loopArray = [];
         for ( let i = 0; i < 4; i++ ) {
             loopArray.push(randomNumbers[i]);
@@ -148,7 +150,7 @@ async function comboMake() {
 
         for(i = 0; i < 4; i++){
             if (guessHolderArray[guess][i] === loopArray[i]) {
-                pegAnwserArray.push('black-peg');
+                pegAnswerArray.push('black-peg');
                 loopArray[i] = -1;
                 guessHolderArray[guess][i] = -2;
             }
@@ -159,7 +161,7 @@ async function comboMake() {
         for(let i = 0; i < 4; i++) {
             for(let j = 0; j < 4; j++) {
                 if(guessHolderArray[guess][i] === loopArray[j]) {
-                pegAnwserArray.push('white-peg');
+                pegAnswerArray.push('white-peg');
                 loopArray[j] = -1;
                 guessHolderArray[guess][i] = -2;
                 }
@@ -168,8 +170,8 @@ async function comboMake() {
 
         console.log(loopArray);
         console.log(guessHolderArray[guess]);
-        console.log(pegAnwserArray);
-        return pegAnwserArray;
+        console.log(pegAnswerArray);
+        return pegAnswerArray;
     }
     //function to select the grade boxes when hitting submit
 

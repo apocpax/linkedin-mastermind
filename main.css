@@ -1,8 +1,10 @@
 body {
 margin: 0%;
 padding: 0;
-background-color: black;
+background-color: white;
 }
+
+
 
 .modal {
     position: absolute;
@@ -17,7 +19,23 @@ background-color: black;
 
 .modal-message {
     width: 35%;
-    margin: 30% auto;
+    margin: 10% auto;
+}
+
+.introduction{
+    position: absolute;
+    top: 0%;
+    max-width: 30%;
+}
+.numberPic{
+    max-width: 80%;
+}
+
+.howToPlay{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    max-width: 30%;
 }
 
 .board {
@@ -29,7 +47,7 @@ background-color: black;
     margin-right: auto;
 
 }
-/* anwser area */
+/* answer area */
 .anwser-container{
         display: flex;
     box-sizing: border-box;
@@ -128,7 +146,7 @@ border: 1px solid black;
 
 .selector{
 
-    width: 16%;
+    width: 12%;
     height: 98%;
     border-radius: 50%;
     border: 1px solid black;
@@ -154,24 +172,44 @@ border: 1px solid black;
 
 .red{
 background-color: red;
+
+
 }
 
 .green{
-background-color: green;
+    background-color: green;
 }
 
 .yellow{
-background-color: yellow;
+    background-color: yellow;
 }
 
 .blue{
-background-color: blue;
+    background-color: blue;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.pink{
+    background-color: pink;
 }
 
 .black{
-background-color: black;
+    background-color: black;
 }
 
 .white{
-background-color: white;
+    background-color: white;
+}
+
+h3{
+
+   position: relative;
+    left: 30%;
+   bottom: 80%;
+   font-size: 25px;
+   color: gray;
+
 }
