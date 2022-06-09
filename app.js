@@ -136,7 +136,7 @@ async function comboMake() {
     function makeColorIntoANumber(color) {
         if(color === 'rgb(255, 0, 0)')  return 0;
         if(color === 'rgb(255, 255, 0)')  return 1;
-        if(color === 'rgb(0, 128, 0)')  return 2;
+        if(color === 'rgb(0, 100, 0)')  return 2;
         if(color === 'rgb(0, 0, 255)')  return 3;
         if(color === 'rgb(128, 0, 128)')  return 4;
         if(color === 'rgb(255, 192, 203)')  return 5;
