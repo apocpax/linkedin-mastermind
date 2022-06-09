@@ -70,12 +70,15 @@ let guessHolderArray = [[-1, -1, -1, -1],
 
     //function for turning selector to the same color
     //as selector-color when clicked on
-    $('.selector-color').click(function () {
+$('.selector-color').click(function () {
         colorChosen = true;
+        console.log('hitting selector-color onclick')
        $('.selector').css('background-color', 'gray');
         let marble = ($(this).parent())[0];
+        console.log(`this is the marble ${marble}`)
         selectedMarble =
         $(this).css('background-color');
+        console.log(`this is the selectedMarble ${selectedMarble}`)
        $(marble).css('background-color', selectedMarble);
     });
 
@@ -83,19 +86,22 @@ let guessHolderArray = [[-1, -1, -1, -1],
     //for the guess
     $('.guess-holder').click(function() {
         if(colorChosen) {
+            console.log('hitting clicking to add color for guess-holder')
             if ($(this).hasClass('current')) {
             let number = parseInt($(this).css('border'));
-
+            console.log(`this is the number ${number}`)
             if (number === 0) {
-            $(this).css('background-color', selectedMarble);
-            $(this).css('border', '2px solid white');
-            let spot = $(this).attr('id');
-            updateGuessArray(selectedMarble, spot);
-            guessCount++;
-            if(guessCount === 4) {
-                $('.submit-btn').show();
-                guessCount = 0;
-            }
+                $(this).css('background-color', selectedMarble);
+                $(this).css('border', '2px solid white');
+                let spot = $(this).attr('id');
+                console.log(`this is the spot ${spot}`)
+                updateGuessArray(selectedMarble, spot);
+                console.log(`this is the guessHolderArray ${guessHolderArray}`)
+                guessCount++;
+                if(guessCount === 4) {
+                    $('.submit-btn').show();
+                    guessCount = 0;
+                }
 
             } else {
                 $(this).css('background-color', backGroundColor);
