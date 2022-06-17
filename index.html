@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
         <script type="text/javascript"
         src="app.js">
     </script>
@@ -22,7 +23,12 @@
             <h2>Wow, you sloved the code!!!</h2>
             <h2>You Won!!!</h2>
             <h2>Think you can do it again?</h2>
-                 <input type="button" value="New Game" onClick="window.location.reload();">
+            <input type="button" value="Play again" onClick="window.location.reload();" class="newGameButton">
+            <audio controls autoplay>
+            <source src="sounds/clapping.wav" type="audio/wav" class="sound">
+            </audio>
+            <img src="https://media0.giphy.com/media/l49JXTYPlm0ABKYzS/giphy.gif?cid=790b761116fe5597be4700a707c3adbca44eabb1d105e35d&rid=giphy.gif&ct=g" alt="won" class="celebration">
+
         </div>
     </div>
 
@@ -237,7 +243,13 @@
                 a new code by pressing this</p>
                 <div class="refresh">
              <input type="button" value="New Game" onClick="window.location.reload();">
+            <div> class="score"
+                <h2>score</h2>
+                <div class="scoreBox">
+                </div>
             </div>
+            </div>
+
         </div>
         <div class="howToPlay">
             <h1>How To Play</h1>

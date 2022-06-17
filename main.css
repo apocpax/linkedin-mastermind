@@ -1,3 +1,6 @@
+
+
+
 body {
 margin: 0%;
 padding: 0;
@@ -22,6 +25,10 @@ background-color: white;
     margin: 10% auto;
 }
 
+.newGameButton {
+    font-size: 100px;
+}
+
 .introduction{
     position: absolute;
     top: 0%;
@@ -41,7 +48,7 @@ background-color: white;
 .board {
     background-color: grey;
     width: 35%;
-    height: 95vh;
+    height: 85vh;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -81,11 +88,12 @@ background-color: white;
 
 .submit-btn {
         display: flex;
-    width: 80%;
+    width: 100%;
     height: 100%;
     background-color: red;
     margin: auto;
     text-align: center;
+    font-size: 330%;
 }
 /* guessing area */
 .guess-container{
@@ -288,5 +296,616 @@ position: relative;
    font-size: 25px;
    color: gray;
     font-size: 300%;
+
+}
+
+.scoreBox{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 200%;
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px)
+{
+    body {
+margin: 0%;
+padding: 0;
+background-color: white;
+}
+
+
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: none;
+}
+
+.modal-message {
+    width: 35%;
+    margin: 10% auto;
+}
+
+.celebration {
+    width: 75%;
+    height: 20vh;
+}
+
+.newGameButton {
+    width: 100%;
+    font-size: 40px;
+}
+
+
+.introduction{
+    position: absolute;
+    top: 0%;
+    max-width: 25%;
+}
+.numberPic{
+    max-width: 80%;
+}
+
+.howToPlay{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    max-width: 25%;
+}
+
+.board {
+    background-color: grey;
+    width: 50%;
+    height: 75vh;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* answer area */
+.answer-container{
+        display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+    padding-top: 1%;
+}
+
+.answer-box{
+        display: flex;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    vertical-align: top;
+}
+.answer{
+        display: flex;
+        width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.button-container{
+       display: flex;
+    width: 25%;
+    height: 96%;
+    border: 1px solid black;
+}
+
+.submit-btn {
+        display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    text-align:  auto;
+    font-size: 175%;
+}
+/* guessing area */
+.guess-container{
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+}
+
+.guess-row{
+    display: flex;
+    height: 9.8%;
+    width: 100%;
+    border-bottom: 1px solid darkred;
+}
+.guess-holders{
+display: flex;
+height: 100%;
+width: 70%;
+
+}
+
+.guess-holder{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    margin-left: 1px;
+    padding: 0 1%;
+}
+
+.grades-holders{
+display: flex;
+flex-wrap: wrap;
+height: 100%;
+width: 25%;
+border: 1px solid black;
+}
+.grade-holder{
+    display: flex;
+    box-sizing: border-box;
+    width: 45%;
+    height: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+/* selectoring color section */
+.selection-container{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+}
+
+.selector{
+
+    width: 11.5%;
+    height: 98%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.selector:hover{
+     border: 1px solid white;
+
+}
+
+.selector-color{
+
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 15% auto;
+}
+
+.selector-color:hover{
+    border: 1px solid white;
+}
+
+.red{
+background-color: red;
+
+
+}
+
+.green{
+    background-color: darkgreen;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+.number0{
+
+position: relative;
+    left: 15%;
+   bottom: 60%;
+   color: gray;
+    font-size: 250%;
+
+
+}
+
+.number1{
+
+position: relative;
+    left: 15%;
+   bottom: 60%;
+   color: gray;
+    font-size: 250%;
+
+}
+
+.number2{
+
+position: relative;
+    left: 15%;
+   bottom: 60%;
+   color: gray;
+    font-size: 250%;
+
+}
+
+.number3{
+
+position: relative;
+    left: 15%;
+   bottom: 60%;
+   color: gray;
+    font-size: 250%;
+
+}
+
+.number4{
+
+position: relative;
+    left: 15%;
+   bottom: 60%;
+   color: gray;
+    font-size: 250%;
+
+}
+
+.number5{
+position: relative;
+    left: 15%;
+    bottom: 60%;
+    color: gray;
+    font-size: 250%;
+
+}
+
+.number6{
+position: relative;
+    left: 15%;
+    bottom: 60%;
+    color: gray;
+    font-size: 250%;
+
+
+}
+
+.number7{
+position: relative;
+    left: 15%;
+    bottom: 60%;
+    color: gray;
+    font-size: 250%;
+
+}
+
+
+}
+@media screen and (min-width: 320px) and (max-width: 690px)
+{
+    body {
+margin: 0%;
+padding: 0;
+background-color: white;
+}
+
+
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: none;
+}
+
+.modal-message {
+    width: 35%;
+    margin: 10% auto;
+}
+
+.sound {
+    width: 50px;
+}
+
+.celebration {
+    width: 75%;
+    height: 20vh;
+}
+
+.newGameButton {
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.introduction{
+    position: absolute;
+    top: 0%;
+    max-width: 25%;
+}
+.numberPic{
+    max-width: 80%;
+}
+
+.howToPlay{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    max-width: 25%;
+}
+
+.board {
+    background-color: grey;
+    width: 50%;
+    height: 75vh;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* answer area */
+.answer-container{
+        display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+    padding-top: 1%;
+}
+
+.answer-box{
+        display: flex;
+    width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    vertical-align: top;
+}
+.answer{
+        display: flex;
+        width: 70%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.button-container{
+       display: flex;
+    width: 25%;
+    height: 96%;
+    border: 1px solid black;
+}
+
+.submit-btn {
+        display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    text-align:  auto;
+    font-size: 75%;
+}
+/* guessing area */
+.guess-container{
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    border: 1px solid white;
+}
+
+.guess-row{
+    display: flex;
+    height: 9.8%;
+    width: 100%;
+    border-bottom: 1px solid darkred;
+}
+.guess-holders{
+display: flex;
+height: 100%;
+width: 70%;
+
+}
+
+.guess-holder{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    margin-left: 1px;
+    padding: 0 1%;
+}
+
+.grades-holders{
+display: flex;
+flex-wrap: wrap;
+height: 100%;
+width: 25%;
+border: 1px solid black;
+}
+.grade-holder{
+    display: flex;
+    box-sizing: border-box;
+    width: 45%;
+    height: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+/* selectoring color section */
+.selection-container{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    border: 1px solid white;
+}
+
+.selector{
+
+    width: 11.5%;
+    height: 98%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.selector:hover{
+     border: 1px solid white;
+
+}
+
+.selector-color{
+
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 15% auto;
+}
+
+.selector-color:hover{
+    border: 1px solid white;
+}
+
+.red{
+background-color: red;
+
+
+}
+
+.green{
+    background-color: darkgreen;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+.number0{
+
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+
+}
+
+.number1{
+
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number2{
+
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number3{
+
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number4{
+
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number5{
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number6{
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
+
+.number7{
+position: relative;
+    left: 3%;
+    bottom: 50%;
+    color: gray;
+    font-size: 150%;
+
+}
 
 }
